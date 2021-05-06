@@ -1,15 +1,16 @@
+import 'package:first_flutter_application/small_topic/mediaQuery.dart';
 import 'package:flutter/material.dart';
 
-class Mediaquery extends StatefulWidget {
+class FluterLifeCycle extends StatefulWidget {
   @override
-  _MediaqueryState createState() => _MediaqueryState();
+  _FluterLifeCycleState createState() => _FluterLifeCycleState();
 }
 
-class _MediaqueryState extends State<Mediaquery> with WidgetsBindingObserver {
+class _FluterLifeCycleState extends State<FluterLifeCycle>  with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
+    WidgetsBinding.instance!.addObserver(this);
     print('call init state');
   }
 
@@ -57,7 +58,7 @@ class _MediaqueryState extends State<Mediaquery> with WidgetsBindingObserver {
   @override
   void dispose() {
     super.dispose();
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
     print("dispose");
   }
 

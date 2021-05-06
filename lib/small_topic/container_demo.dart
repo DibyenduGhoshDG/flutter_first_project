@@ -11,6 +11,7 @@ class HomeScreen extends StatelessWidget {
       drawer: Drawer(),
       endDrawer: Drawer(),
       floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
         child: Icon(Icons.add),
       ),
       drawerEnableOpenDragGesture: false,
